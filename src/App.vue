@@ -1,12 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <div id="app">@{{ user.username }} - {{}}</div>
 </template>
+
+<script>
+// import Header from "./components/Header";
+export default {
+  el: "#app",
+  name: "App",
+  components: {},
+  data() {
+    return {
+      followers: 0,
+      user: {
+        id: 1,
+        username: "_JohnSmith",
+        firstName: "John",
+        lastName: "Smith",
+        email: "johnsmith@xmail.com",
+        isAdmin: true,
+      },
+    };
+  },
+};
+</script>
 
 <style>
 #app {
